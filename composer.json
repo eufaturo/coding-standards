@@ -1,0 +1,59 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "eufaturo/coding-standards",
+    "description": "Coding standards for Eufaturo projects.",
+    "type": "composer-plugin",
+    "keywords": [
+        "php",
+        "eufaturo",
+        "coding-standards"
+    ],
+    "homepage": "https://eufaturo.pt",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Gaspar",
+            "email": "bruno@eufaturo.pt",
+            "homepage": "https://eufaturo.pt"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "composer-plugin-api": "^2.1",
+        "composer/composer": "^2.5",
+        "driftingly/rector-laravel": "^2.0",
+        "larastan/larastan": "^3.0",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-mockery": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "rector/rector": "^2.0",
+        "symplify/easy-coding-standard": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eufaturo\\CodingStandards\\": "src/"
+        }
+    },
+    "scripts": {
+        "ecs:fix": "./vendor/bin/ecs --fix",
+        "ecs:check": "./vendor/bin/ecs",
+        "phpstan:check": "./vendor/bin/phpstan analyse --ansi",
+        "phpstan:generate-baseline":  "./vendor/bin/phpstan --generate-baseline",
+        "rector:fix": "./vendor/bin/rector process --ansi",
+        "rector:check": "./vendor/bin/rector process --ansi --dry-run"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "class": "Eufaturo\\CodingStandards\\Plugin"
+    },
+    "minimum-stability": "stable"
+}
