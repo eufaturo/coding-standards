@@ -1,0 +1,14 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+    - ./vendor/phpstan/phpstan-mockery/extension.neon
+    - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - ./vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    paths:
+        - src/
+
+    level: 0
+
+    parallel:
+        processTimeout: 300.0
