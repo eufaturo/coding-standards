@@ -1,0 +1,8 @@
+includes:
+    - ./../../larastan/larastan/extension.neon
+    - ./../../phpstan/phpstan-mockery/extension.neon
+    - ./../../phpstan/phpstan-deprecation-rules/rules.neon
+    - ./../../phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    checkMissingIterableValueType: false

@@ -1,0 +1,49 @@
+{
+    "name": "werxe/coding-standards",
+    "description": "Coding standards for Werxe projects.",
+    "type": "composer-plugin",
+    "keywords": [
+        "php",
+        "werxe",
+        "coding-standards"
+    ],
+    "homepage": "https://werxe.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Werxe Team",
+            "email": "hello@werxe.com",
+            "homepage": "https://werxe.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "composer-plugin-api": "^2.1",
+        "composer/composer": "^2.5",
+        "larastan/larastan": "^2.8",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-mockery": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "rector/rector": "^0.17.6",
+        "symplify/easy-coding-standard": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Werxe\\CodingStandards\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "class": "Werxe\\CodingStandards\\Plugin"
+    },
+    "minimum-stability": "stable"
+}
