@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Werxe\CodingStandards\Commands;
+namespace Eufaturo\CodingStandards\Commands;
 
 use Composer\Command\BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,7 +12,7 @@ final class GenerateCommand extends BaseCommand
 {
     protected function configure()
     {
-        $this->setName('werxe:setup-coding-standards');
+        $this->setName('eufaturo:setup-coding-standards');
 
         $this->addOption('force');
     }
@@ -27,7 +27,7 @@ final class GenerateCommand extends BaseCommand
 
         $output->writeln(
             sprintf(
-                'Werxe Coding Standards has %s stub files (%s)',
+                'Eufaturo Coding Standards has %s stub files (%s)',
                 count($files),
                 implode(', ', array_keys($files))
             )

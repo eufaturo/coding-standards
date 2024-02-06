@@ -3,12 +3,12 @@
 declare(strict_types = 1);
 
 use Rector\Config\RectorConfig;
-use Werxe\CodingStandards\Config\WerxeRectorConfig;
+use Eufaturo\CodingStandards\Config\EufaturoRectorConfig;
 
 return static function (RectorConfig $rectorConfig): void {
     // $rectorConfig->disableParallel();
 
-    WerxeRectorConfig::setup($rectorConfig);
+    EufaturoRectorConfig::setup($rectorConfig);
 
     $rectorConfig->paths([
         __DIR__ . '/src',

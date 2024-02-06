@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Werxe\CodingStandards;
+namespace Eufaturo\CodingStandards;
 
 use Composer\Plugin\Capability\CommandProvider;
-use Werxe\CodingStandards\Commands\GenerateCommand;
+use Eufaturo\CodingStandards\Commands\GenerateCommand;
 
 final class CodingStandardsCommandProvider implements CommandProvider
 {

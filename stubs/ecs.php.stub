@@ -3,7 +3,7 @@
 declare(strict_types = 1);
 
 use Symplify\EasyCodingStandard\Config\ECSConfig;
-use Werxe\CodingStandards\Config\WerxeEcsConfig;
+use Eufaturo\CodingStandards\Config\EufaturoEcsConfig;
 
 return static function (ECSConfig $ecsConfig): void {
     $ecsConfig->paths([
@@ -12,5 +12,5 @@ return static function (ECSConfig $ecsConfig): void {
         __DIR__ . '/tests',
     ]);
 
-    WerxeEcsConfig::setup($ecsConfig);
+    EufaturoEcsConfig::setup($ecsConfig);
 };

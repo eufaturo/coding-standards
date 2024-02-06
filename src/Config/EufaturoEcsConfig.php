@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Werxe\CodingStandards\Config;
+namespace Eufaturo\CodingStandards\Config;
 
 use PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer;
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
@@ -163,7 +163,7 @@ use PhpCsFixer\Fixer\Whitespace\TypesSpacesFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-class WerxeEcsConfig
+class EufaturoEcsConfig
 {
     public static function setup(ECSConfig $ecsConfig): void
     {

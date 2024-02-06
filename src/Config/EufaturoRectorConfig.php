@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Werxe\CodingStandards\Config;
+namespace Eufaturo\CodingStandards\Config;
 
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
@@ -17,7 +17,7 @@ use Rector\Php80\Rector\Identical\StrStartsWithRector;
 use Rector\Php80\Rector\NotIdentical\StrContainsRector;
 use Rector\Php81\Rector\Property\ReadOnlyPropertyRector;
 
-class WerxeRectorConfig
+class EufaturoRectorConfig
 {
     public static function setup(RectorConfig $rectorConfig): void
     {

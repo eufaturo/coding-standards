@@ -1,5 +1,5 @@
 includes:
-    - ./vendor/werxe/coding-standards/phpstan.neon
+    - ./vendor/eufaturo/coding-standards/phpstan.neon
 
 parameters:
     paths:

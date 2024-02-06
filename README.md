@@ -1,6 +1,6 @@
-# Werxe Coding Standards
+# Eufaturo Coding Standards
 
-This repository contains the coding standards followed by Werxe projects.
+This repository contains the coding standards followed by Eufaturo projects.
 
 It includes configuration for:
 - [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard) (`ecs`)
@@ -12,13 +12,13 @@ It includes configuration for:
 First install the dependency through Composer by running:
 
 ```shell
-composer require werxe/coding-standards --dev
+composer require eufaturo/coding-standards --dev
 ```
 
 Once the dependency is installed, run the following:
 
 ```shell
-composer werxe:setup-coding-standards
+composer eufaturo:setup-coding-standards
 ```
 
 Next open your `composer.json` file and add the following section:

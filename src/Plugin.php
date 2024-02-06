@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Werxe\CodingStandards;
+namespace Eufaturo\CodingStandards;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;

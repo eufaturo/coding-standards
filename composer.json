@@ -1,19 +1,19 @@
 {
-    "name": "werxe/coding-standards",
-    "description": "Coding standards for Werxe projects.",
+    "name": "eufaturo/coding-standards",
+    "description": "Coding standards for Eufaturo projects.",
     "type": "composer-plugin",
     "keywords": [
         "php",
-        "werxe",
+        "eufaturo",
         "coding-standards"
     ],
-    "homepage": "https://werxe.com",
+    "homepage": "https://eufaturo.pt",
     "license": "MIT",
     "authors": [
         {
-            "name": "Werxe Team",
-            "email": "hello@werxe.com",
-            "homepage": "https://werxe.com"
+            "name": "Eufaturo Team",
+            "email": "hello@eufaturo.pt",
+            "homepage": "https://eufaturo.pt"
         }
     ],
     "require": {
@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Werxe\\CodingStandards\\": "src/"
+            "Eufaturo\\CodingStandards\\": "src/"
         }
     },
     "config": {
@@ -43,7 +43,7 @@
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         },
-        "class": "Werxe\\CodingStandards\\Plugin"
+        "class": "Eufaturo\\CodingStandards\\Plugin"
     },
     "minimum-stability": "stable"
 }
