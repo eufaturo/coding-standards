@@ -50,9 +50,6 @@
         "sort-packages": true
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        },
         "class": "Eufaturo\\CodingStandards\\Plugin"
     },
     "minimum-stability": "stable"
