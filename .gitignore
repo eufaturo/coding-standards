@@ -1,3 +1,4 @@
+/@CodeCoverage/
 /vendor/
 /.phpunit.cache
 composer.lock
