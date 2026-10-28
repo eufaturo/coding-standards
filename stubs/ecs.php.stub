@@ -5,12 +5,9 @@ declare(strict_types = 1);
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Eufaturo\CodingStandards\Config\EufaturoEcsConfig;
 
-return static function (ECSConfig $ecsConfig): void {
-    $ecsConfig->paths([
+return EufaturoEcsConfig::setup(ECSConfig::configure())
+    ->withPaths([
         __DIR__ . '/src',
         __DIR__ . '/config',
         __DIR__ . '/tests',
     ]);
-
-    EufaturoEcsConfig::setup($ecsConfig);
-};
