@@ -161,136 +161,136 @@ use PhpCsFixer\Fixer\Whitespace\NoTrailingWhitespaceFixer;
 use PhpCsFixer\Fixer\Whitespace\NoWhitespaceInBlankLineFixer;
 use PhpCsFixer\Fixer\Whitespace\SingleBlankLineAtEofFixer;
 use PhpCsFixer\Fixer\Whitespace\TypesSpacesFixer;
-use Symplify\EasyCodingStandard\Config\ECSConfig;
+use Symplify\EasyCodingStandard\Configuration\ECSConfigBuilder;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 class EufaturoEcsConfig
 {
-    public static function setup(ECSConfig $ecsConfig): void
+    public static function setup(ECSConfigBuilder $ecsConfig): ECSConfigBuilder
     {
-        $ecsConfig->sets([
+        $ecsConfig->withSets([
             SetList::PSR_12,
         ]);
 
-        $ecsConfig->skip(self::skips());
+        $ecsConfig->withSkip(self::skips());
 
-        $ecsConfig->ruleWithConfiguration(ArraySyntaxFixer::class, [
+        $ecsConfig->withConfiguredRule(ArraySyntaxFixer::class, [
             'syntax' => 'short',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(CastSpacesFixer::class, [
+        $ecsConfig->withConfiguredRule(CastSpacesFixer::class, [
             'space' => 'single',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(ClassAttributesSeparationFixer::class, [
+        $ecsConfig->withConfiguredRule(ClassAttributesSeparationFixer::class, [
             'elements' => [
-                'const'        => 'one',
-                'method'       => 'one',
-                'property'     => 'one',
+                'const' => 'one',
+                'method' => 'one',
+                'property' => 'one',
                 'trait_import' => 'none',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(OrderedInterfacesFixer::class, [
+        $ecsConfig->withConfiguredRule(OrderedInterfacesFixer::class, [
             'direction' => 'ascend',
-            'order'     => 'alpha',
+            'order' => 'alpha',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(VisibilityRequiredFixer::class, [
+        $ecsConfig->withConfiguredRule(VisibilityRequiredFixer::class, [
             'elements' => ['property', 'const', 'method'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(SingleLineCommentStyleFixer::class, [
+        $ecsConfig->withConfiguredRule(SingleLineCommentStyleFixer::class, [
             'comment_types' => ['hash'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(NoUnneededControlParenthesesFixer::class, [
+        $ecsConfig->withConfiguredRule(NoUnneededControlParenthesesFixer::class, [
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(FunctionDeclarationFixer::class, [
+        $ecsConfig->withConfiguredRule(FunctionDeclarationFixer::class, [
             'closure_function_spacing' => 'one',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(MethodArgumentSpaceFixer::class, [
+        $ecsConfig->withConfiguredRule(MethodArgumentSpaceFixer::class, [
             'on_multiline' => 'ignore',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(ReturnTypeDeclarationFixer::class, [
+        $ecsConfig->withConfiguredRule(ReturnTypeDeclarationFixer::class, [
             'space_before' => 'none',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(OrderedImportsFixer::class, [
+        $ecsConfig->withConfiguredRule(OrderedImportsFixer::class, [
             'sort_algorithm' => 'alpha',
-            'imports_order'  => [
+            'imports_order' => [
                 'class',
                 'function',
                 'const',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(GlobalNamespaceImportFixer::class, [
+        $ecsConfig->withConfiguredRule(GlobalNamespaceImportFixer::class, [
             'import_constants' => true,
-            'import_classes'   => true,
+            'import_classes' => true,
             'import_functions' => true,
         ]);
 
-        $ecsConfig->ruleWithConfiguration(DeclareEqualNormalizeFixer::class, [
+        $ecsConfig->withConfiguredRule(DeclareEqualNormalizeFixer::class, [
             'space' => 'single',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(ErrorSuppressionFixer::class, [
+        $ecsConfig->withConfiguredRule(ErrorSuppressionFixer::class, [
             'noise_remaining_usages' => true,
         ]);
 
-        $ecsConfig->ruleWithConfiguration(SingleSpaceAroundConstructFixer::class, [
+        $ecsConfig->withConfiguredRule(SingleSpaceAroundConstructFixer::class, [
             'constructs_contain_a_single_space' => ['yield_from'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(ListSyntaxFixer::class, [
+        $ecsConfig->withConfiguredRule(ListSyntaxFixer::class, [
             'syntax' => 'short',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(BlankLinesBeforeNamespaceFixer::class, [
+        $ecsConfig->withConfiguredRule(BlankLinesBeforeNamespaceFixer::class, [
             'min_line_breaks' => 2,
             'max_line_breaks' => 2,
         ]);
 
-        $ecsConfig->ruleWithConfiguration(BinaryOperatorSpacesFixer::class, [
-            'default'   => 'align_single_space_minimal',
+        $ecsConfig->withConfiguredRule(BinaryOperatorSpacesFixer::class, [
+            'default' => 'align_single_space_minimal',
             'operators' => [
-                '+='  => 'single_space',
-                '='   => 'single_space',
-                '=='  => 'single_space',
+                '+=' => 'single_space',
+                '=' => 'single_space',
+                '==' => 'single_space',
                 '===' => 'single_space',
                 '!==' => 'single_space',
-                '&&'  => 'single_space',
-                '??'  => 'single_space',
-                '+'   => 'single_space',
-                '-'   => 'single_space',
-                '/'   => 'single_space',
-                '>'   => 'single_space',
-                '=>'  => 'single_space',
+                '&&' => 'single_space',
+                '??' => 'single_space',
+                '+' => 'single_space',
+                '-' => 'single_space',
+                '/' => 'single_space',
+                '>' => 'single_space',
+                '=>' => 'single_space',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(ConcatSpaceFixer::class, [
+        $ecsConfig->withConfiguredRule(ConcatSpaceFixer::class, [
             'spacing' => 'none',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(IncrementStyleFixer::class, [
+        $ecsConfig->withConfiguredRule(IncrementStyleFixer::class, [
             'style' => 'post',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(OperatorLinebreakFixer::class, [
+        $ecsConfig->withConfiguredRule(OperatorLinebreakFixer::class, [
             'position' => 'beginning',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(AlignMultilineCommentFixer::class, [
+        $ecsConfig->withConfiguredRule(AlignMultilineCommentFixer::class, [
             'comment_type' => 'phpdocs_only',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(GeneralPhpdocAnnotationRemoveFixer::class, [
+        $ecsConfig->withConfiguredRule(GeneralPhpdocAnnotationRemoveFixer::class, [
             'annotations' => [
                 'expectedException',
                 'expectedExceptionMessage',
@@ -298,91 +298,91 @@ class EufaturoEcsConfig
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(GeneralPhpdocTagRenameFixer::class, [
+        $ecsConfig->withConfiguredRule(GeneralPhpdocTagRenameFixer::class, [
             'case_sensitive' => false,
             'fix_annotation' => true,
-            'fix_inline'     => true,
-            'replacements'   => [
-                'inheritDoc'  => 'inheritdoc',
+            'fix_inline' => true,
+            'replacements' => [
+                'inheritDoc' => 'inheritdoc',
                 'inheritdocs' => 'inheritdoc',
                 'inheritDocs' => 'inheritdoc',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocAlignFixer::class, [
-            'tags'  => ['param'],
+        $ecsConfig->withConfiguredRule(PhpdocAlignFixer::class, [
+            'tags' => ['param'],
             'align' => 'vertical',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocInlineTagNormalizerFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocInlineTagNormalizerFixer::class, [
             'tags' => ['example', 'id', 'internal', 'inheritdoc', 'inheritdocs', 'link', 'source', 'toc', 'tutorial'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocLineSpanFixer::class, [
-            'const'    => 'multi',
+        $ecsConfig->withConfiguredRule(PhpdocLineSpanFixer::class, [
+            'const' => 'multi',
             'property' => 'multi',
-            'method'   => 'multi',
+            'method' => 'multi',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocNoAliasTagFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocNoAliasTagFixer::class, [
             'replacements' => [
                 'property-write' => 'property',
-                'type'           => 'var',
-                'link'           => 'see',
+                'type' => 'var',
+                'link' => 'see',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocOrderByValueFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocOrderByValueFixer::class, [
             'annotations' => ['covers'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocReturnSelfReferenceFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocReturnSelfReferenceFixer::class, [
             'replacements' => [
-                'this'    => '$this',
-                '@this'   => '$this',
-                '$self'   => 'self',
-                '@self'   => 'self',
+                'this' => '$this',
+                '@this' => '$this',
+                '$self' => 'self',
+                '@self' => 'self',
                 '$static' => 'static',
                 '@static' => 'static',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocScalarFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocScalarFixer::class, [
             'types' => ['boolean', 'double', 'integer', 'real', 'str'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocTagCasingFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocTagCasingFixer::class, [
             'tags' => ['inheritdoc'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocTagTypeFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocTagTypeFixer::class, [
             'tags' => [
                 'inheritdoc' => 'inline',
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocToCommentFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocToCommentFixer::class, [
             'ignored_tags' => ['var'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocTypesFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocTypesFixer::class, [
             'groups' => ['simple', 'alias', 'meta'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpdocTypesOrderFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpdocTypesOrderFixer::class, [
             'null_adjustment' => 'always_last',
-            'sort_algorithm'  => 'alpha',
+            'sort_algorithm' => 'alpha',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(MultilineWhitespaceBeforeSemicolonsFixer::class, [
+        $ecsConfig->withConfiguredRule(MultilineWhitespaceBeforeSemicolonsFixer::class, [
             'strategy' => 'new_line_for_chained_calls',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(SpaceAfterSemicolonFixer::class, [
+        $ecsConfig->withConfiguredRule(SpaceAfterSemicolonFixer::class, [
             'remove_in_empty_for_expressions' => true,
         ]);
 
-        $ecsConfig->ruleWithConfiguration(BlankLineBeforeStatementFixer::class, [
+        $ecsConfig->withConfiguredRule(BlankLineBeforeStatementFixer::class, [
             'statements' => [
                 'break',
                 'continue',
@@ -404,11 +404,11 @@ class EufaturoEcsConfig
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(HeredocIndentationFixer::class, [
+        $ecsConfig->withConfiguredRule(HeredocIndentationFixer::class, [
             'indentation' => 'start_plus_one',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(NoExtraBlankLinesFixer::class, [
+        $ecsConfig->withConfiguredRule(NoExtraBlankLinesFixer::class, [
             'tokens' => [
                 'break',
                 'continue',
@@ -423,36 +423,36 @@ class EufaturoEcsConfig
             ],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(NoSpacesAroundOffsetFixer::class, [
+        $ecsConfig->withConfiguredRule(NoSpacesAroundOffsetFixer::class, [
             'positions' => ['outside'],
         ]);
 
-        $ecsConfig->ruleWithConfiguration(TypesSpacesFixer::class, [
+        $ecsConfig->withConfiguredRule(TypesSpacesFixer::class, [
             'space' => 'single',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpUnitExpectationFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpUnitExpectationFixer::class, [
             'target' => 'newest',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpUnitNamespacedFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpUnitNamespacedFixer::class, [
             'target' => 'newest',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpUnitNoExpectationAnnotationFixer::class, [
-            'target'          => 'newest',
+        $ecsConfig->withConfiguredRule(PhpUnitNoExpectationAnnotationFixer::class, [
+            'target' => 'newest',
             'use_class_const' => true,
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpUnitTestAnnotationFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpUnitTestAnnotationFixer::class, [
             'style' => 'prefix',
         ]);
 
-        $ecsConfig->ruleWithConfiguration(PhpUnitTestCaseStaticMethodCallsFixer::class, [
+        $ecsConfig->withConfiguredRule(PhpUnitTestCaseStaticMethodCallsFixer::class, [
             'call_type' => 'this',
         ]);
 
-        $ecsConfig->rules([
+        $ecsConfig->withRules([
             BlankLineAfterNamespaceFixer::class,
             BlankLineAfterOpeningTagFixer::class,
             CleanNamespaceFixer::class,
@@ -564,6 +564,8 @@ class EufaturoEcsConfig
             UnaryOperatorSpacesFixer::class,
             WhitespaceAfterCommaInArrayFixer::class,
         ]);
+
+        return $ecsConfig;
     }
 
     public static function skips(array $additional = []): array

@@ -20,9 +20,9 @@ final class GenerateCommand extends BaseCommand
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $files = [
-            'ecs.php'      => __DIR__.'/../../stubs/ecs.php.stub',
+            'ecs.php' => __DIR__.'/../../stubs/ecs.php.stub',
             'phpstan.neon' => __DIR__.'/../../stubs/phpstan.neon.stub',
-            'rector.php'   => __DIR__.'/../../stubs/rector.php.stub',
+            'rector.php' => __DIR__.'/../../stubs/rector.php.stub',
         ];
 
         $output->writeln(
